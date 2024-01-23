@@ -16,58 +16,7 @@ layout: default
     {% endif %}
 
     <div class="image-container">
-      <img alt="Cerebrum" src="assets/images/cerebrum.png" style="height: 50vh; opacity: 0.4;" id="background-image"/>
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          let linesCount = Math.floor(Math.random() * 5) + 1;
-
-          setTimeout(() => {
-            linesCount = Math.floor(Math.random() * (5 - 1)) + 1
-          }, 10000)
-
-          for (let i = 0; i < linesCount; i++) {
-            createMovingText();
-          }
-
-          function createMovingText() {
-            const text = document.createElement('div');
-            text.className = 'moving-text';
-            text.textContent = generateRandomString();
-            document.querySelector('.image-container').appendChild(text);
-
-            const direction = Math.random() > 0.5 ? 1 : -1;
-            const speed = Math.random() * 10 + 5; // Adjust speed as needed
-
-            let position = Math.random() * document.querySelector('.image-container').offsetWidth;
-            let yPos = Math.random() * window.innerHeight;
-
-            function move() {
-              position += speed * direction;
-              if (position > document.querySelector('.image-container').offsetWidth) {
-                position = -text.clientWidth;
-              } else if (position < -text.clientWidth) {
-                position = document.querySelector('.image-container').offsetWidth;
-              }
-
-              text.style.transform = `translate(${position}px, ${yPos}px)`;
-              requestAnimationFrame(move);
-            }
-
-            move();
-          }
-
-          function generateRandomString() {
-            const length = Math.floor(Math.random() * 50);
-            let randomString = '';
-            for (let i = 0; i < length; i++) {
-              randomString += Math.round(Math.random());
-            }
-            return randomString.trim();
-          }
-        });
-      </script>
-
+      <img alt="Cerebrum" src="assets/images/cerebrum.png" style="height: 500px; opacity: 0.4;" id="background-image"/>      
     </div>
     {% if site.title %}
       <h2>
