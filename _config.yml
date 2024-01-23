@@ -15,9 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Walnuts AI
 email: contact@walnuts.ai
-description: >- # this means to ignore newlines until "baseurl:"
+description1: >- # this means to ignore newlines until "baseurl:"
   Intelligence that listens to your body. 
-  
+description2: >-  
   And understands.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://walnuts-ai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
