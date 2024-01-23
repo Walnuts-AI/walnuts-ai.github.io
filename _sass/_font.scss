@@ -4,6 +4,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-   src: local('BeVietnamPro Black'), local('BeVietnamPro-Black.ttf'),
-        url('#{$asset_url}/fonts/BeVietnamPro-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+   src: local('BeVietnamPro Black'), local('BeVietnamPro-Black'),
+        url('BeVietnamPro-Black.ttf') format('truetype'), /* Safari, Android, iOS */
 }
