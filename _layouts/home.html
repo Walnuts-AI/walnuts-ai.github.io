@@ -61,7 +61,7 @@ layout: default
             const length = Math.floor(Math.random() * 50);
             let randomString = '';
             for (let i = 0; i < length; i++) {
-              randomString += ((Math.random() - 0.5) * 10).toFixed(2) + ' ';
+              randomString += Math.round(Math.random());
             }
             return randomString.trim();
           }
