@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
-
-    <img alt="Cerebrum" src="assets/images/cerebrum.png"/>
-    
-    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}  
-
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
 
     <link rel="apple-touch-icon" href="{{ site.icon }}">
@@ -22,6 +16,12 @@
 
   </head>
   <body>
+    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
+
+    <img alt="Cerebrum" src="assets/images/cerebrum.png" height="400px"/>
+    
+    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}  
+
 <!--
     {% if page.layout == 'home' %}
       <a href="#main" class="skip-navigation">
