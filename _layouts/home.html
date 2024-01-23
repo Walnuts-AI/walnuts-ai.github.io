@@ -40,7 +40,7 @@ layout: default
             const speed = Math.random() * 10 + 5; // Adjust speed as needed
 
             let position = Math.random() * document.querySelector('.image-container').offsetWidth;
-            let yPos = Math.random() * document.querySelector('.image-container').offsetHeight;
+            let yPos = Math.random() * window.innerHeight;
 
             function move() {
               position += speed * direction;
