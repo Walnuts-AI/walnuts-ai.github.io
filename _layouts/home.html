@@ -50,7 +50,7 @@ layout: default
                 position = document.querySelector('.image-container').offsetWidth;
               }
 
-              text.style.transform = `translate(${position}px, ${yPos + document.querySelector('.image-container').offsetTop}px)`;
+              text.style.transform = `translate(${position}px, ${yPos}px)`;
               requestAnimationFrame(move);
             }
 
