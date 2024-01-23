@@ -2,7 +2,7 @@ $brand-color:         rgb(198, 200, 205);
 $highlight:           lighten($brand-color, 35%);
 $text-color:          #160fdc;
 $muted-text-color:    #000000;
-$font-family:         "Racing Sans One", "EB Garamond", Garamond, "Times New Roman", serif;
+$font-family:         "Racing Sans One", RacingSansOne, "EB Garamond", Garamond, "Times New Roman", serif;
 
 $on-bigphone:         375px;
 $on-tablet:           768px;
