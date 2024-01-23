@@ -15,8 +15,57 @@ layout: default
       </h1>
     {% endif %}
 
-    <img alt="Cerebrum" src="assets/images/cerebrum.png"/>
+    <img alt="Cerebrum" src="assets/images/cerebrum.png" id="background-image"/>
     
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const linesCount = Math.floor(Math.random() * 5) + 1;
+
+        setTimeout(() => {
+          linesCount = Math.floor(Math.random() * (5 - 1)) + 1
+        }, 10000)
+
+        for (let i = 0; i < linesCount; i++) {
+          createMovingText();
+        }
+
+        function createMovingText() {
+          const text = document.createElement('div');
+          text.className = 'moving-text';
+          text.textContent = generateRandomString();
+          document.body.appendChild(text);
+
+          const direction = Math.random() > 0.5 ? 1 : -1;
+          const speed = Math.random() * 4 + 0.5; // Adjust speed as needed
+
+          let position = Math.random() * window.innerWidth;
+          let yPos = Math.random() * window.innerHeight;
+
+          function move() {
+            position += speed * direction;
+            if (position > window.innerWidth) {
+              position = -text.clientWidth;
+            } else if (position < -text.clientWidth) {
+              position = window.innerWidth;
+            }
+
+            text.style.transform = `translate(${position}px, ${yPos}px)`;
+            requestAnimationFrame(move);
+          }
+
+          move();
+        }
+
+        function generateRandomString() {
+          const length = Math.floor(Math.random() * 50);
+          let randomString = '';
+          for (let i = 0; i < length; i++) {
+            randomString += ((Math.random() - 0.5) * 10).toFixed(2) + ' ';
+          }
+          return randomString.trim();
+        }
+      });
+    </script>
     {% if site.title %}
       <h2>
         {{ site.description }}
