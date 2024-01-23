@@ -18,7 +18,7 @@ email: contact@walnuts.ai
 description: >- # this means to ignore newlines until "baseurl:"
   Intelligence that listens to your body. And understands.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wailnuts-ai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://walnuts-ai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/icon-512.png
 twitter_username: walnuts-ai
 github_username:  walnuts-ai
