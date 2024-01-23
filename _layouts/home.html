@@ -47,10 +47,10 @@ layout: default
               if (position > document.querySelector('.image-container').offsetWidth) {
                 position = -text.clientWidth;
               } else if (position < -text.clientWidth) {
-                position = document.querySelector('.image-container').offsetWidt;
+                position = document.querySelector('.image-container').offsetWidth;
               }
 
-              text.style.transform = `translate(${position}px, ${yPos}px)`;
+              text.style.transform = `translate(${position}px, ${yPos + document.querySelector('.image-container').offsetTop}px)`;
               requestAnimationFrame(move);
             }
 
