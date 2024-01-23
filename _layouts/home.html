@@ -15,57 +15,60 @@ layout: default
       </h1>
     {% endif %}
 
-    <img alt="Cerebrum" src="assets/images/cerebrum.png" id="background-image"/>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        let linesCount = Math.floor(Math.random() * 5) + 1;
+    <div class="image-container">
+      <img alt="Cerebrum" src="assets/images/cerebrum.png" id="background-image"/>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          let linesCount = Math.floor(Math.random() * 5) + 1;
 
-        setTimeout(() => {
-          linesCount = Math.floor(Math.random() * (5 - 1)) + 1
-        }, 10000)
+          setTimeout(() => {
+            linesCount = Math.floor(Math.random() * (5 - 1)) + 1
+          }, 10000)
 
-        for (let i = 0; i < linesCount; i++) {
-          createMovingText();
-        }
+          for (let i = 0; i < linesCount; i++) {
+            createMovingText();
+          }
 
-        function createMovingText() {
-          const text = document.createElement('div');
-          text.className = 'moving-text';
-          text.textContent = generateRandomString();
-          document.body.appendChild(text);
+          function createMovingText() {
+            const text = document.createElement('div');
+            text.className = 'moving-text';
+            text.textContent = generateRandomString();
+            document.querySelector('.image-container').appendChild(text);
 
-          const direction = Math.random() > 0.5 ? 1 : -1;
-          const speed = Math.random() * 4 + 0.5; // Adjust speed as needed
+            const direction = Math.random() > 0.5 ? 1 : -1;
+            const speed = Math.random() * 4 + 0.5; // Adjust speed as needed
 
-          let position = Math.random() * window.innerWidth;
-          let yPos = Math.random() * window.innerHeight;
+            let position = Math.random() * document.querySelector('.image-container').offsetWidth;
+            let yPos = Math.random() * document.querySelector('.image-container').offsetHeight;
 
-          function move() {
-            position += speed * direction;
-            if (position > window.innerWidth) {
-              position = -text.clientWidth;
-            } else if (position < -text.clientWidth) {
-              position = window.innerWidth;
+            function move() {
+              position += speed * direction;
+              if (position > document.querySelector('.image-container').offsetWidth) {
+                position = -text.clientWidth;
+              } else if (position < -text.clientWidth) {
+                position = document.querySelector('.image-container').offsetWidt;
+              }
+
+              text.style.transform = `translate(${position}px, ${yPos}px)`;
+              requestAnimationFrame(move);
             }
 
-            text.style.transform = `translate(${position}px, ${yPos}px)`;
-            requestAnimationFrame(move);
+            move();
           }
 
-          move();
-        }
-
-        function generateRandomString() {
-          const length = Math.floor(Math.random() * 50);
-          let randomString = '';
-          for (let i = 0; i < length; i++) {
-            randomString += ((Math.random() - 0.5) * 10).toFixed(2) + ' ';
+          function generateRandomString() {
+            const length = Math.floor(Math.random() * 50);
+            let randomString = '';
+            for (let i = 0; i < length; i++) {
+              randomString += ((Math.random() - 0.5) * 10).toFixed(2) + ' ';
+            }
+            return randomString.trim();
           }
-          return randomString.trim();
-        }
-      });
-    </script>
+        });
+      </script>
+
+    </div>
     {% if site.title %}
       <h2>
         {{ site.description }}
