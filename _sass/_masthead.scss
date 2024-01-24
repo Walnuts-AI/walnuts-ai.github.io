@@ -6,6 +6,8 @@
 
 .site-masthead h1 {
   font-size: 3em;
+  font-style: normal;
+  font-weight: bold;
   margin-bottom: 0;
   margin-top: 1em;
   padding: 0 2rem;
@@ -18,6 +20,7 @@
   color: $muted-text-color;
   font-size: 1.25em;
   font-style: normal;
+  font-weight: lighter;
   margin: 0;
   padding: 0 2rem;
   @media (min-width: $on-tablet) {

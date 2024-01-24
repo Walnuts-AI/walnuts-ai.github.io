@@ -2,8 +2,20 @@
 @font-face {
   font-family: 'BeVietnamPro';
   font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-   src: local('BeVietnamPro Black'), local('BeVietnamPro-Black'),
-        url('../fonts/BeVietnamPro-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+  font-weight: bold;
+  src: url('../fonts/BeVietnamPro-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'BeVietnamPro';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/BeVietnamPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'BeVietnamPro';
+  font-style: normal;
+  font-weight: lighter;
+  src: url('../fonts/BeVietnamPro-Light.ttf') format('truetype'), /* Safari, Android, iOS */
 }
