@@ -84,7 +84,7 @@ input, select {
  * Syntax highlighting styles
  */
 code.highlighter-rouge {
-  background: #c29595;
+  background: white;
   font-family: courier, monospace;
   font-size: 0.875em;
 }
@@ -99,7 +99,7 @@ code.highlighter-rouge {
   padding: 0 1.5rem;
 }
 .highlighter-rouge .highlight {
-  background: #c29595;
+  background: white;
 }
 .highlight .c {
   color: #998;
@@ -320,7 +320,7 @@ code.highlighter-rouge {
   src: url("../fonts/BungeeShade-Regular.ttf") format("truetype");
 }
 body {
-  background: #693c3c;
+  background: #fafafa;
   font-family: BeVietnamPro;
   font-size: 1em;
   line-height: 1.5;
@@ -474,7 +474,7 @@ figcaption {
 }
 
 .skip-navigation {
-  background: #693c3c;
+  background: #fafafa;
   border: 1px dashed transparent;
   display: block;
   font-size: 0.875em;
@@ -486,7 +486,7 @@ figcaption {
   text-transform: uppercase;
 }
 .skip-navigation:hover, .skip-navigation:focus {
-  background: #714141;
+  background: white;
   border-color: #001254;
   margin-top: 0;
 }
@@ -642,7 +642,7 @@ figcaption {
   margin: 2em auto;
   max-width: 60rem;
   padding: 2em 0;
-  box-shadow: 12px 18px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 12px 18px 24px rgba(123, 123, 123, 0.1);
 }
 
 .post > * {
@@ -671,7 +671,7 @@ figcaption {
 }
 
 .post a:hover {
-  background: #c29595;
+  background: white;
 }
 
 .post dl,
@@ -715,8 +715,8 @@ figcaption {
   margin: 0 0.25em;
 }
 .footnote:hover, .footnote:focus {
-  background: #693c3c;
-  border-color: #693c3c;
+  background: #fafafa;
+  border-color: #fafafa;
 }
 
 .footnotes::before {
