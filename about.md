@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Team
 ---
 
-Our team is composed of three co-founders with ten-year of multi-discipline experiences each. Our expertises complements one from another; each of the cofounders is an expert in their own fields: audio with voices and speech, text with languages and reasoning, images with perception and cognition.
 
 # Huy Phan, Ph.D - Chief of AI
 
